@@ -18,7 +18,7 @@ const App: VFC = () => {
   const getNftData = async () => {
     if (!walletAddress) return;
     const response = await fetch(
-      `https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:0x169dC6401DB73C05219252A759361EE0d244D528`,
+      `https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:${walletAddress}`,
     );
     const data = await response.json();
     debugger;
